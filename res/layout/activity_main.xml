@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <Button
+        android:id="@+id/normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Standard"
+        android:onClick="standardMap" />
+    
+    <Button
+        android:id="@+id/hybrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hybrid"
+        android:layout_toRightOf="@id/normal"
+        android:onClick="hybridMap" />
+    
+    <Button
+        android:id="@+id/terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terrain"
+        android:layout_toRightOf="@id/hybrid"
+        android:onClick="terrainMap" />
+    
+    <EditText 
+        android:id="@+id/input"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter a location"
+        android:background="#FFFFFFFF"
+        android:layout_alignParentBottom="true"/>
+    
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Submit"
+        android:textSize="12sp"
+        android:layout_above="@id/input"
+        android:layout_alignLeft="@id/input"
+        android:onClick="submitInfo"/>
+  
+</RelativeLayout>
+
+
